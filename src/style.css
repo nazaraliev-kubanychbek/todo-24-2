@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.header{
+    background-color: #5e00b8;
+    padding: 20px;
+    text-align: center;
+}
+
+.header-logo{
+    color: white;
+}
