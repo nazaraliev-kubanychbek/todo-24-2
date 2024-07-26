@@ -1,0 +1,24 @@
+
+.todo-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid;
+}
+
+.todo-item-left{
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+}
+
+.todo-item-right{
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+}
+
+.todo-item-important{
+    background-color: red;
+}

@@ -17,16 +17,18 @@ const TodoForm = ({data, setData}) => {
                 : 1
             },
             ...data
-        ])
+        ]);
+        setText('');
     }
     return (
         <div className="todo-form">
             <input type="text" className="todo-form-input"
+            value={text}
             onChange={ e =>{
                 setText(e.target.value)
             }}
             />
-            
+
             <button className="todo-form-btn"
             onClick={()=>{
                 addTodo()
