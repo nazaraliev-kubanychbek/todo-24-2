@@ -1,7 +1,7 @@
 import './form.css';
 import { useState } from 'react';
 
-const TodoForm = ({data, setData}) => {
+const TodoForm = ({data, setData, setStatus, status}) => {
     const [text, setText] = useState('');
 
     const addTodo = () =>{
@@ -19,6 +19,7 @@ const TodoForm = ({data, setData}) => {
             ...data
         ]);
         setText('');
+        setStatus('all');
     }
     return (
         <div className="todo-form">
@@ -27,13 +28,19 @@ const TodoForm = ({data, setData}) => {
             onChange={ e =>{
                 setText(e.target.value)
             }}
+            disabled={status === 'deleted'}
             />
 
-            <button className="todo-form-btn"
-            onClick={()=>{
-                addTodo()
-            }}
-            >add</button>
+{
+    status === 'deleted'
+    ? ""
+    : <button className="todo-form-btn"
+    onClick={()=>{
+        addTodo()
+    }}
+    >add</button>
+}
+
         </div>
     );
 }

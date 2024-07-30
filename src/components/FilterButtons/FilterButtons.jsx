@@ -1,21 +1,46 @@
-
+import './filterButtons.css';
 
 const FilterButtons = ({setStatus, status}) => {
   return (
-    <div>
-      <button onClick={()=>{
+    <div className='filterButtons'>
+
+      <button className={
+        status === 'all'
+        ? 'filterButtons-btn filterButtons-btn-active'
+        : 'filterButtons-btn'
+      } onClick={()=>{
         setStatus('all')
       }}>all</button>
-      <button onClick={()=>{
+
+      <button className={
+        status === 'active'
+        ? 'filterButtons-btn filterButtons-btn-active'
+        : 'filterButtons-btn'
+      } onClick={()=>{
         setStatus('active')
       }}>active</button>
-      <button onClick={()=>{
+
+      <button className={
+        status === 'completed'
+        ? 'filterButtons-btn filterButtons-btn-active'
+        : 'filterButtons-btn'
+      } onClick={()=>{
         setStatus('completed')
       }}>completed</button>
-      <button onClick={()=>{
+
+      <button className={
+        status === 'important'
+        ? 'filterButtons-btn filterButtons-btn-active'
+        : 'filterButtons-btn'
+      } onClick={()=>{
         setStatus('important')
       }}>important</button>
-      <button onClick={()=>{
+
+      <button className={
+        status === 'deleted'
+        ? 'filterButtons-btn filterButtons-btn-active'
+        : 'filterButtons-btn'
+      } onClick={()=>{
         setStatus('deleted')
       }}>deleted</button>
     </div>

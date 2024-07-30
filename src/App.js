@@ -39,7 +39,7 @@ function App() {
   return (
     <div >
       <Header />
-      <TodoForm data={data} setData={setData} />
+      <TodoForm status={status} setStatus={setStatus} data={data} setData={setData} />
       <TodoList
       status={status}
       setStatus={setStatus}

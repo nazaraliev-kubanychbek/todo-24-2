@@ -1,0 +1,24 @@
+
+.filterButtons-btn{
+    background-color: #5e00b8;
+    color: #fff;
+    padding: 5px 15px;
+    border: 1px solid #5e00b8;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.filterButtons-btn:hover{
+    background-color: #fff;
+    color: #5e00b8;
+}
+
+.filterButtons-btn-active{
+    background-color: #fff;
+    color: #5e00b8;
+}
+
+.filterButtons{
+    display: flex;
+    justify-content: space-between;
+}
