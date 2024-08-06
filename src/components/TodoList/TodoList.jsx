@@ -12,7 +12,10 @@ const TodoList = ({list, data, setData, status, setStatus}) => {
                     [key]: !item[key]
                 }
             } else{
-                return item
+                return {
+                    ...item,
+                    correct: false
+                }
             }
         }))
     }

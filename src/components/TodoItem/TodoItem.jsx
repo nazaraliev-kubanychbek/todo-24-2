@@ -20,17 +20,22 @@ const TodoItem = ({ item, setKey, status, deleteItem }) => {
         {status === "deleted"
         ? <button onClick={()=>{
           deleteItem(item.id)
-        }}>delete</button>
+        }}><i className="fa-solid fa-trash" /></button>
        : <>
             <button onClick={()=>{
               setKey(item.id, "correct")
-            }}>edit</button>
+            }}><i className="fa-solid fa-pen-to-square" /></button>
             <button
               onClick={() => {
                 setKey(item.id, "important");
               }}
             >
-              important
+              {
+                item.important
+                ?  <i className="fa-solid fa-star" />
+                : <i className="fa-regular fa-star" />
+              }
+
             </button>
           </>
         }
@@ -40,7 +45,12 @@ const TodoItem = ({ item, setKey, status, deleteItem }) => {
             setKey(item.id, "deleted");
           }}
         >
-          {status === "deleted" ? "restore" : "delete"}
+          {
+          status === "deleted"
+           ? <i className="fa-solid fa-trash-can-arrow-up" />
+           : <i className="fa-solid fa-trash" />
+           }
+
         </button>
       </div>
     </div>

@@ -8,6 +8,7 @@ const EditItem = ({item, setKey, data, setData}) => {
             onChange={(event)=>{
                 setText(event.target.value)
             }}
+            autoFocus={true}
             />
             <button onClick={()=>{
                 if(text.trim().length > 0){

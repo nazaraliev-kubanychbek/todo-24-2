@@ -16,7 +16,12 @@ const TodoForm = ({data, setData, setStatus, status}) => {
                 ? data[0].id + 1
                 : 1
             },
-            ...data
+            ...data.map(item =>{
+                return {
+                    ...item,
+                    correct: false
+                }
+            })
         ]);
         setText('');
         setStatus('all');
@@ -24,6 +29,7 @@ const TodoForm = ({data, setData, setStatus, status}) => {
     return (
         <div className="todo-form">
             <input type="text" className="todo-form-input"
+            autoFocus={true}
             value={text}
             onChange={ e =>{
                 setText(e.target.value)

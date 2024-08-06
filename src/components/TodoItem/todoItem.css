@@ -15,9 +15,19 @@
 
 .todo-item-right{
     display: flex;
-    column-gap: 5px;
+    column-gap: 10px;
     align-items: center;
 }
+
+.todo-item button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    background-color: #5e00b8;
+    color: white;
+    padding: 10px;
+}
+
 
 .todo-item-important{
     background-color: red;
